@@ -1,0 +1,140 @@
+html {
+	background: #ccc;
+	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+body {
+	margin: 0;
+}
+
+header {
+	background: #000;
+	color: #fff;
+	overflow:hidden;
+	padding: 0 10px;
+}
+
+header a {
+	margin-top: 25px;
+}
+
+figcaption { padding: 10px 0;}
+
+nav li {
+	display:inline;
+}
+
+img {
+	margin: 0;
+	max-width: 100%;
+}
+
+a { color:inherit;}
+
+h1 {
+	text-transform: uppercase;
+	font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+}
+
+ul {
+	padding: 0;
+}
+
+figure {
+	padding: 0;
+	margin: 0;
+}
+
+.fl {float:left;}
+.fr {float:right;}
+
+.btn {
+	background: #000;
+	min-width: 100%;
+	color: #fff;
+	display: inline-block;
+	padding: 10px 0;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.wrapper { 
+	max-width: 1024px;
+	margin: 0 auto;
+	background: #fff;
+	overflow: hidden;
+	padding: 3%;
+}
+
+.site-header {
+	width: 100%;
+	overflow: hidden;
+	padding: 0;
+}
+
+.site-header h1 {
+	margin: 0;
+}
+
+
+
+.blurb {
+	background: #fff;
+}
+
+.blurb figure {	
+	width: 100%;
+}
+
+.blurb img {
+	width: 100%;
+}
+
+
+
+.blurb .content-area p {
+	padding: 0 3%;
+}
+
+
+
+@media (min-width: 455px) {
+	
+	html {
+		
+	}
+	
+	.wrapper {
+		padding: 0;
+		background: 0;
+	}
+	
+	
+	.blurb {
+		width: 47.5%;
+		float: left;
+		margin: 0 5% 5% 0;
+	}
+	
+	.blurb:nth-child(even){
+		margin-right: 0;
+	}
+	
+	.blurb figure {
+		max-width: 40%;
+		float: left;
+	}
+	
+	.blurb p {
+		width: 50%;
+		float: right;
+	}
+	
+	.blurb .full-text p {
+		width: 94%;
+		float: none;
+	}
+
+}
