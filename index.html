@@ -122,6 +122,7 @@
 .box1 {
 	background: red;
 	border: 2px solid orange;
+	color: black;
 }
 						</code></pre>
 						<small>Let's go a little bit farther</small>
@@ -157,6 +158,7 @@
 .box1 {
 	background: red;
 	border: 2px solid orange;
+	color: black;
 }
 
 .box-wrapper {
@@ -177,12 +179,14 @@
 					</section>
 					<section>
 						<img src="images/boxbasic.png">
-						<p>Every 'block level' element has 4 basic layout rules.</p>
+						<p>Every 'block level' element has 3 basic layout rules.</p>
 						<ul>
 							<li>Padding</li>
 							<li>Border</li>
 							<li>Margin</li>
-						</ul>						
+						</ul>
+						<hr>
+						<p class="fragment"><small>Ok, I'm lying. There are a lot more than 3...</small></p>
 					</section>
 					<section>
 						<p>In this example, the picture is the content area of the image-box</p>
@@ -199,6 +203,7 @@
 							<img class="demo-img" src="images/smile-face.png">
 						</div>
 						<p><small>By the way, the picture is still just a box on it's own.</small></p>
+						<p><small>It only looks round due to the transparent corners.</small></p>
 					</section>
 					<section>
 						<p>Give the image-box background (so we can see it)</p>
@@ -242,6 +247,32 @@
 }
 						</code></pre>
 					</section>
+					<section>
+						<p>Up next: floats!</p>
+						<hr />
+						<div class="clearfix">
+							<div class="demo-image-box exp4">
+								<img class="demo-img-no-style" src="images/smile-face.png">
+							</div>
+							<div class="demo-image-box exp4">
+								<img class="demo-img-no-style" src="images/smile-face.png">
+							</div>
+							<div class="demo-image-box exp4">
+								<img class="demo-img-no-style" src="images/smile-face.png">
+							</div>
+						</div>
+						<hr />
+						<pre><code data-trim contenteditable>
+.image-box{
+	background: white;
+	border: 5px solid red;
+	padding: 25px;
+	margin: 60px;
+
+	float: left;
+}
+						</code></pre>
+					</section>
 				</section>
 				<section>
 					<section>
@@ -252,7 +283,20 @@
 						</ul>
 						<small>via <a href="http://mobithinking.com/mobile-marketing-tools/latest-mobile-stats/b#mobile-only">mobiThinking</a></small>
 					</section>
-
+					<section>
+						<h3>Mobile networks suck.</h3>
+					</section>
+					<section>
+						<h4>In short</h4>
+						<h3>Provide the most important content in the least amount of data.</h3>
+					</section>
+					<section>
+							<blockquote>Do I need that image to understand the content?</blockquote>
+							<small>Probably not.</small>
+							
+							<blockquote>Users NEED my fancy transition slider fader carousel!</blockquote>
+							<small>I really just wanted to read, but thanks for making me wait all day.</small>
+					</section>
 				</section>
 
 				<section>
