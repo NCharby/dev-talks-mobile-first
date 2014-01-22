@@ -50,49 +50,209 @@
 				<section>
 					<section>
 						<h2>How does front-end code work?</h2>
-						<small>A working knowlege in under 5 mins.</small>
+						<small>A working knowlege in under 10 mins.</small>
 					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<pre>
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;Beginning HTML!&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
 
+					<section>
+						<h3>HTML is just a nested tree structure</h3>
+						<img src="images/dom-tree.jpg" />
+						<p>Each item, or "node", or "element" is contained within a parent</p>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							```
+<table class="show-table">
+	<tr>
+		<td>(0,0)</td>
+		<td>(1,0)</td>
+	</tr>
+	<tr>
+		<td>(0,1)</td>
+		<td>(1,1)</td>
+	</tr>	    
+</table>
+							```
+						</script>
+					</section>
+					<section>
+						<h2>Our table</h2>
+						<p>Each tag pair is just a box that we can style.</p>			
+						<table class="show-table">
+						    <tr>
+							    <td>
+									(0,0)
+					    	    </td>
+    					        <td>
+			    				    (1,0)
+					    		</td>
+						    </tr>
+			    			<tr>
+							    <td>
+									(0,1)
+					    	    </td>
+    					        <td>
+			    				    (1,1)
+					    		</td>
+						    </tr>	    
+						</table>
 
-&lt;/body&gt;
-						</pre>
+					</section>					
+				</section>
+				<section>
+					<section>
+						<h2>Another example</h2>						
+						<small>Lets draw some boxes to demonstrate</small>
+						<pre><code data-trim contenteditable>
+&lt;div class="box1"&gt;
+    &lt;p&gt;Im in a box!&lt;/p&gt;
+&lt;/div&gt;
+						</code></pre>
 					</section>
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
+						<div class="demo-box1">
+							<p>I'm in a box!</p>
+						</div>
+
+						<pre><code data-trim contenteditable>
+&lt;div class="box1"&gt;
+    &lt;p&gt;Im in a box!&lt;/p&gt;
+&lt;/div&gt;
+						</code></pre>
+						<pre><code data-trim contenteditable>
+.box1 {
+	background: red;
+	border: 2px solid orange;
+}
+						</code></pre>
+						<small>Let's go a little bit farther</small>
 					</section>
 					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
+						<h3>Putting the box in a 'wrapper'</h3>
+						<pre><code data-trim contenteditable>
+&lt;div class=&quot;box-wrapper&quot;&gt;
+    &lt;p&gt;Im outside of the box :)&lt;/p&gt;
+    &lt;div class=&quot;box1&quot;&gt;
+        &lt;p&gt;Im in a box&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+						</code></pre>
+						<p>Nesting boxes allows us to start building layouts</p>
+					</section>
+					<section>
+						<div class="demo-box-wrapper">
+						    <p>I'm outside of the box :)</p>
+						    <div class="demo-box1">
+						        <p>I'm in a box</p>
+						    </div>
+						</div>
+						<pre><code data-trim contenteditable>
+&lt;div class=&quot;box-wrapper&quot;&gt;
+    &lt;p&gt;I'm outside of the box :)&lt;/p&gt;
+    &lt;div class=&quot;box1&quot;&gt;
+        &lt;p&gt;I'm in a box&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+						</code></pre>
+						<pre><code data-trim contenteditable>
+.box1 {
+	background: red;
+	border: 2px solid orange;
+}
+
+.box-wrapper {
+	background: white;
+	border: 4px red solid;
+	color: blue; /*Notice what this does?*/
+}
+						</code></pre>
+						<small>Bam! Layout!</small>
 					</section>
 				</section>
 
 				<section>
 					<section>
-						<h2>"Mobile First"</h2>
+						<h2>Box Model</h2>
+						<small>~ Or ~</small>
+						<h4>The reason first-year dev students never get any sleep</h4>	
+					</section>
+					<section>
+						<img src="images/boxbasic.png">
+						<p>Every 'block level' element has 4 basic layout rules.</p>
 						<ul>
-							<li>There are over 1.2 billion mobile web users worldwide</li>
-							<li><strong>In the U.S., 25% of mobile Web users are mobile-only</strong> (they rarely use a desktop to access the web)</li>
-						</ul>
-						<small>via <a href="http://mobithinking.com/mobile-marketing-tools/latest-mobile-stats/b#mobile-only">mobiThinking</a></small>
+							<li>Padding</li>
+							<li>Border</li>
+							<li>Margin</li>
+						</ul>						
+					</section>
+					<section>
+						<p>In this example, the picture is the content area of the image-box</p>
+						<img class="demo-img-no-style" src="images/smile-face.png">
+						<pre><code data-trim contenteditable>
+<div class="image-box">
+	<img src="images/smile-face.png">
+</div>						
+						</code></pre>
 					</section>
 					<section>
 
+						<div class="">
+							<img class="demo-img" src="images/smile-face.png">
+						</div>
+						<p><small>By the way, the picture is still just a box on it's own.</small></p>
 					</section>
+					<section>
+						<p>Give the image-box background (so we can see it)</p>
+						<div class="demo-image-box">
+							<img class="demo-img-no-style" src="images/smile-face.png">
+						</div>
+						<pre><code data-trim contenteditable>
+.image-box {
+	background: white;
+}
+						</code></pre>
+					</section>
+					<section>
+						<p>Now a border and some padding</p>
+						<hr />
+						<div class="demo-image-box exp2">
+							<img class="demo-img-no-style" src="images/smile-face.png">
+						</div>
+						<hr />
+						<pre><code data-trim contenteditable>
+.image-box {
+	background: white;
+	border: 5px solid red;
+	padding: 25px;
+}
+						</code></pre>
+					</section>
+					<section>
+						<p>Margin pushes the elements around the image-box farther out</p>
+						<hr />
+						<div class="demo-image-box exp3">
+							<img class="demo-img-no-style" src="images/smile-face.png">
+						</div>
+						<hr />
+						<pre><code data-trim contenteditable>
+.image-box {
+	background: white;
+	border: 5px solid red;
+	padding: 25px;
+	margin: 60px;
+}
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>"Mobile First"</h2>
+						<ul>
+							<li>There are over 1.2 billion mobile web users worldwide</li>
+							<li>In the U.S., <strong>25% of mobile Web users are mobile-only</strong> (they rarely use a desktop to access the web)</li>
+						</ul>
+						<small>via <a href="http://mobithinking.com/mobile-marketing-tools/latest-mobile-stats/b#mobile-only">mobiThinking</a></small>
+					</section>
+
 				</section>
 
 				<section>
