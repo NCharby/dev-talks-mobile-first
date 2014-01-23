@@ -92,7 +92,9 @@ figure {
 	width: 100%;
 }
 
-
+.module-area {
+	padding: 3% 0;
+}
 
 .blurb .content-area p {
 	padding: 0 3%;
